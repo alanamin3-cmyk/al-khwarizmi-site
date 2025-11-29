@@ -71,27 +71,25 @@
             font-size: 1rem;
         }
 
-        .logo-img {
-            height: 42px;
-            width: auto;
-            display: block;
-        }
+       .logo-img {
+    height: 42px;
+    width: auto;
+    display: block;
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1.2rem;
-            font-size: 0.95rem;
-        }
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;   /* reduces vertical gap */
+}
 
-        nav li a {
-            padding-bottom: 0.1rem;
-            border-bottom: 2px solid transparent;
-        }
+.logo-text small {
+    font-weight: 400;
+    color: #555;
+    margin-top: 0.05rem;
+    font-size: 0.78rem;
+}
 
-        nav li a:hover {
-            border-color: var(--accent);
-        }
 
         .nav-toggle {
             display: none;
