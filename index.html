@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Al-Khwarizmi – Agency of Denk Pharma in Iraqi Kurdistan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        :root {
+            --primary: #0056b3;   /* Medical blue */
+            --accent:  #f4c300;   /* Denk yellow-style accent */
+            --dark:    #0b1a2b;
+            --light:   #f7f8fb;
+            --text:    #222;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            color: var(--text);
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* --- HEADER / NAVBAR --- */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e6f0;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0.5rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1rem;
+        }
+
+        .logo-img {
+            height: 42px;
+            width: auto;
+            display: block;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.2rem;
+            font-size: 0.95rem;
+        }
+
+        nav li a {
+            padding-bottom: 0.1rem;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav li a:hover {
+            border-color: var(--accent);
+        }
+
+        /* --- HERO --- */
+
+        .hero {
+            position: relative;
+            background: linear-gradient(
+                        to right,
+                        rgba(11, 26, 43, 0.9),
+                        rgba(11, 26, 43, 0.7)
+                      ),
+                      url("https://images.pexels.com/photos/3952234/pexels-photo-3952234.jpeg?auto=compress&cs=tinysrgb&w=1600") center/cover no-repeat;
+            color: #ffffff;
+        }
+
+        .hero-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem 3.5rem;
+            display: grid;
+            grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.2rem 0.7rem;
+            border-radius: 999px;
+            background-color: rgba(244, 195, 0, 0.18);
+            color: var(--accent);
+            font-size: 0.8rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            margin-top: 1rem;
+            font-size: 2.1rem;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .hero p {
+            margin-top: 1rem;
+            font-size: 0.98rem;
+            max-width: 32rem;
+            color: #e9edf6;
+        }
+
+        .hero-cta {
+            margin-top: 1.8rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .btn-primary {
+            border: none;
+            padding: 0.7rem 1.4rem;
+            border-radius: 999px;
+            background-color: #f4c300;
+            color: #000;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+        }
+
+        .btn-outline {
+            border-radius: 999px;
+            padding: 0.7rem 1.2rem;
+            border: 1px solid rgba(255,255,255,0.6);
+            background: transparent;
+            color: #ffffff;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .hero-highlight {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .hero-highlight-card {
+            padding: 0.9rem 1rem;
+            border-radius: 0.7rem;
+            background-color: rgba(15, 36, 63, 0.9);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .hero-highlight-card h3 {
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+            color: #f4c300;
+        }
+
+        .hero-highlight-card p {
+            margin-top: 0;
+            font-size: 0.85rem;
+            color: #d9e0f2;
+        }
+
+        /* --- GENERIC SECTION STYLES --- */
+
+        section {
+            padding: 3.5rem 1.5rem;
+        }
+
+        .section-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            margin-bottom: 0.7rem;
+            color: var(--dark);
+        }
+
+        .section-subtitle {
+            font-size: 0.95rem;
+            color: #5c6475;
+            max-width: 38rem;
+        }
+
+        /* --- ABOUT / VISION-MISSION-VALUES --- */
+
+        .about {
+            background-color: var(--light);
+        }
+
+        .vmv-grid {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.5rem;
+        }
+
+        .vmv-card {
+            background-color: #ffffff;
+            border-radius: 0.9rem;
+            padding: 1.4rem 1.3rem;
+            box-shadow: 0 8px 20px rgba(15, 35, 52, 0.08);
+            border-top: 3px solid var(--primary);
+        }
+
+        .vmv-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+            color: var(--primary);
+        }
+
+        .vmv-card p {
+            font-size: 0.9rem;
+            color: #465066;
+        }
+
+        /* --- NETWORK SECTION --- */
+
+        .network {
+            background-color: #ffffff;
+        }
+
+        .network-grid {
+            margin-top: 1.8rem;
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 0.9rem;
+            font-size: 0.9rem;
+        }
+
+        .network-pill {
+            padding: 0.5rem 0.7rem;
+            text-align: center;
+            border-radius: 999px;
+            border: 1px solid #dde2ee;
+            background-color: #fafbff;
+        }
+
+        /* --- PARTNERS / SUPPLIERS --- */
+
+        .partners {
+            background-color: var(--light);
+        }
+
+        .partner-logos {
+            margin-top: 1.8rem;
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .partner-logo {
+            height: 60px;
+            border-radius: 0.7rem;
+            background: #ffffff;
+            border: 1px solid #e2e6f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: #777;
+        }
+
+        /* --- AWARDS / QUALITY --- */
+
+        .awards {
+            background-color: #ffffff;
+        }
+
+        .awards-grid {
+            margin-top: 1.8rem;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.5rem;
+        }
+
+        .award-card {
+            padding: 1.2rem 1.3rem;
+            border-radius: 0.9rem;
+            border: 1px solid #e2e6f0;
+            background-color: #ffffff;
+        }
+
+        .award-card h3 {
+            font-size: 0.95rem;
+            margin-bottom: 0.4rem;
+            color: var(--primary);
+        }
+
+        .award-card p {
+            font-size: 0.86rem;
+            color: #525b70;
+        }
+
+        /* --- CONTACT / FOOTER --- */
+
+        .contact {
+            background-color: #0b1a2b;
+            color: #e8edf9;
+        }
+
+        .contact-grid {
+            margin-top: 1.8rem;
+            display: grid;
+            grid-template-columns: 2fr 1.4fr;
+            gap: 2rem;
+            alignments: flex-start;
+        }
+
+        .contact h3 {
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+            color: #f4c300;
+        }
+
+        .contact p, .contact li {
+            font-size: 0.9rem;
+            color: #d0d6ea;
+        }
+
+        .contact ul {
+            list-style: none;
+            margin-top: 0.7rem;
+        }
+
+        .contact li + li {
+            margin-top: 0.2rem;
+        }
+
+        .contact strong {
+            color: #ffffff;
+        }
+
+        .socials {
+            margin-top: 0.9rem;
+            display: flex;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+        }
+
+        .social-pill {
+            padding: 0.35rem 0.8rem;
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.35);
+            font-size: 0.8rem;
+        }
+
+        footer {
+            background-color: #050a12;
+            color: #9ca4bd;
+            font-size: 0.8rem;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0.9rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* --- RESPONSIVE --- */
+
+        @media (max-width: 900px) {
+            nav ul {
+                display: none; /* simplify: desktop-style menu only */
+            }
+
+            .hero-inner {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .hero-highlight {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .vmv-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .network-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .partner-logos {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .awards-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .contact-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+
+        @media (max-width: 520px) {
+            .network-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .partner-logos {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <div class="logo">
+            <img src="al-khwarizmi-logo.png" alt="Al-Khwarizmi logo" class="logo-img" />
+            <div>
+                <div>Al-Khwarizmi</div>
+                <small style="font-weight: 400; color:#555;">Agency of Denk Pharma – Marketing, Sales & Regulatory Support</small>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#network">Network</a></li>
+                <li><a href="#partners">Suppliers</a></li>
+                <li><a href="#awards">Quality & Awards</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="hero">
+    <div class="hero-inner">
+        <div>
+            <div class="hero-badge">
+                <span>Agency of Denk Pharma</span>
+            </div>
+            <h1>Supporting Denk Pharma’s high-quality European medicines across Iraqi Kurdistan and Iraq.</h1>
+            <p>
+                In partnership with Denk Pharma GmbH &amp; Co. KG, Al-Khwarizmi Co. provides marketing,
+                medical promotion, sales support, and regulatory coordination for Denk Pharma’s
+                portfolio in Iraqi Kurdistan and Iraq.
+            </p>
+            <div class="hero-cta">
+                <a href="#contact"><button class="btn-primary">Contact us</button></a>
+                <a href="#network"><button class="btn-outline">Explore our network</button></a>
+            </div>
+        </div>
+        <div class="hero-highlight">
+            <div class="hero-highlight-card">
+                <h3>Marketing &amp; sales support</h3>
+                <p>
+                    Field-force planning, territory coverage analysis, and structured follow-up with
+                    doctors, dentists, and pharmacies to support Denk Pharma’s sales growth.
+                </p>
+            </div>
+            <div class="hero-highlight-card">
+                <h3>Scientific promotion</h3>
+                <p>
+                    Medical and sales teams trained to provide evidence-based information on Denk Pharma
+                    products to doctors, dentists, and pharmacists throughout the region.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT / VISION MISSION VALUES -->
+<section id="about" class="about">
+    <div class="section-inner">
+        <h2 class="section-title">About our company</h2>
+        <p class="section-subtitle">
+            Together, Denk Pharma and Al-Khwarizmi Co. combine international quality standards with
+            local market expertise to support market access and responsible use of safe, effective,
+            and affordable medicines.
+        </p>
+
+        <div class="vmv-grid">
+            <div class="vmv-card">
+                <h3>Our vision</h3>
+                <p>
+                    To be the leading strategic agency for Denk Pharma in Iraqi Kurdistan and Iraq, supporting
+                    better health outcomes for patients and communities.
+                </p>
+            </div>
+            <div class="vmv-card">
+                <h3>Our mission</h3>
+                <p>
+                    To support Denk Pharma’s high-quality pharmaceutical portfolio through scientific
+                    marketing, medical promotion, sales support, and close collaboration with
+                    healthcare professionals and regulatory bodies.
+                </p>
+            </div>
+            <div class="vmv-card">
+                <h3>Our values</h3>
+                <p>
+                    Quality, transparency, and long-term partnership guide our daily work—from scientific
+                    events and field visits to after-sales support and regulatory follow-up.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- NETWORK -->
+<section id="network" class="network">
+    <div class="section-inner">
+        <h2 class="section-title">Our agency coverage</h2>
+        <p class="section-subtitle">
+            Through our collaboration with Denk Pharma’s distributors and local partners, we support
+            promotional and sales activities across key regions in Iraqi Kurdistan and the rest of
+            Iraq.
+        </p>
+
+        <div class="network-grid">
+            <div class="network-pill">Erbil</div>
+            <div class="network-pill">Sulaymaniyah</div>
+            <div class="network-pill">Duhok</div>
+            <div class="network-pill">Kirkuk</div>
+            <div class="network-pill">Halabja</div>
+        </div>
+    </div>
+</section>
+
+<!-- PARTNERS / SUPPLIERS -->
+<section id="partners" class="partners">
+    <div class="section-inner">
+        <h2 class="section-title">Our partners & suppliers</h2>
+        <p class="section-subtitle">
+            We collaborate closely with Denk Pharma as our key international partner to ensure
+            that all activities around their products reflect strict quality standards and
+            regulatory compliance.
+        </p>
+
+        <div class="partner-logos">
+            <div class="partner-logo">Denk Pharma</div>
+        </div>
+    </div>
+</section>
+
+<!-- AWARDS / QUALITY FOCUS -->
+<section id="awards" class="awards">
+    <div class="section-inner">
+        <h2 class="section-title">Compliance &amp; professional standards</h2>
+        <p class="section-subtitle">
+            We align our work with international ethical marketing principles and local regulatory
+            requirements, supported by documented procedures and regular training.
+        </p>
+
+        <div class="awards-grid">
+            <div class="award-card">
+                <h3>Regulatory alignment</h3>
+                <p>
+                    We coordinate closely with Denk Pharma and local health authorities to ensure
+                    that all promotional and regulatory activities comply with Iraqi and Kurdistan
+                    Ministry of Health requirements.
+                </p>
+            </div>
+            <div class="award-card">
+                <h3>Trained workforce</h3>
+                <p>
+                    Medical and sales representatives receive ongoing training on Denk Pharma
+                    products, ethical promotion standards, pharmacovigilance, and reporting.
+                </p>
+            </div>
+            <div class="award-card">
+                <h3>Partnership recognition</h3>
+                <p>
+                    Our performance and transparency as a local agency help us sustain a long-term
+                    partnership with Denk Pharma and other international manufacturers.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT / FOOTER TOP -->
+<section id="contact" class="contact">
+    <div class="section-inner">
+        <h2 class="section-title" style="color:#ffffff;">Contact & address</h2>
+        <p class="section-subtitle" style="color:#cbd3ea;">
+            For product, partnership, and event enquiries, please contact our Sulaymaniyah office or
+            reach us by e-mail.
+        </p>
+
+        <div class="contact-grid">
+            <div>
+                <h3>Office address</h3>
+                <p>
+                    <strong>Al-Khwarizmi Company For Trading Pharmaceuticals, Medical Devices and Laboratory Supplies / Limited</strong><br />
+                    Apartment no. 6<br />
+                    Second floor<br />
+                    Sazgar building (Sazgar Drugestore)<br />
+                    Goran St. (Orzdi St.)<br />
+                    Sulaymaniyah<br />
+                    Iraq
+                </p>
+
+                <ul>
+                    <li><strong>Phone:</strong> +964 770 481 9142</li>
+                    <li><strong>E-mail:</strong> contact@al-kharizimi.co</li>
+                </ul>
+
+                <div class="socials">
+                    <span class="social-pill">LinkedIn</span>
+                    <span class="social-pill">Facebook</span>
+                    <span class="social-pill">Instagram</span>
+                </div>
+            </div>
+            <div>
+                <h3>Get in touch</h3>
+                <p>
+                    For cooperation, distribution opportunities, or scientific events in Iraqi
+                    Kurdistan and Iraq, please send a brief e-mail including your contact details
+                    and area of interest.
+                </p>
+                <p style="margin-top:0.5rem;">
+                    We will connect you with the relevant member of our medical or business
+                    development team.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-inner">
+        <div>
+            © <span id="year"></span> Al-Khwarizmi – Agency of Denk Pharma in Iraqi Kurdistan  
+            – All rights reserved.
+        </div>
+        <div>
+            Website concept inspired by leading pharmaceutical distributors in Iraq.
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Simple script to keep the year updated automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
