@@ -71,25 +71,40 @@
             font-size: 1rem;
         }
 
-       .logo-img {
-    height: 42px;
-    width: auto;
-    display: block;
-}
+        .logo-img {
+            height: 42px;
+            width: auto;
+            display: block;
+        }
 
-.logo-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.1;   /* reduces vertical gap */
-}
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1; /* tighter spacing between the two lines */
+        }
 
-.logo-text small {
-    font-weight: 400;
-    color: #555;
-    margin-top: 0.05rem;
-    font-size: 0.78rem;
-}
+        .logo-text small {
+            font-weight: 400;
+            color: #555;
+            margin-top: 0.05rem;
+            font-size: 0.78rem;
+        }
 
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.2rem;
+            font-size: 0.95rem;
+        }
+
+        nav li a {
+            padding-bottom: 0.1rem;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav li a:hover {
+            border-color: var(--accent);
+        }
 
         .nav-toggle {
             display: none;
@@ -597,9 +612,9 @@
     <div class="nav-container">
         <div class="logo">
             <img src="al-khwarizmi-logo.png" alt="Al-Khwarizmi logo" class="logo-img" />
-            <div>
-                <div>Al-Khwarizmi</div>
-                <small style="font-weight: 400; color:#555;">Guardians Of Integrity</small>
+            <div class="logo-text">
+                <div class="logo-title">Al-Khwarizmi</div>
+                <small>Guardians Of Integrity</small>
             </div>
         </div>
         <nav>
