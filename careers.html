@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Careers - Al-Khwarizmi</title>
+  <meta name="description" content="Careers and employment opportunities at Al-Khwarizmi, the exclusive agency of Denk Pharma in Iraqi Kurdistan." />
+  <style>
+    :root {
+      --logo-navy: #072345;
+      --navy: #0f4f7f;
+      --ink: #1f3146;
+      --slate: #66758a;
+      --line: #dce8f1;
+      --border: #b7c7d6;
+      --mist: #f6fbff;
+      --covered: #2387c9;
+      --covered-deep: #176da8;
+      --covered-soft: #eaf6ff;
+      --action: #0f5f9d;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--white);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .page {
+      min-height: 100vh;
+      background:
+        linear-gradient(180deg, rgba(244, 251, 255, 0.96), rgba(255,255,255,1) 440px),
+        var(--white);
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(14px);
+    }
+
+    .header-inner {
+      width: min(1160px, calc(100% - 40px));
+      min-height: 78px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      flex: 0 0 auto;
+    }
+
+    .brand-name {
+      color: var(--logo-navy);
+      font-weight: 760;
+      font-size: 16px;
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+
+    .brand-line {
+      margin-top: 3px;
+      color: var(--slate);
+      font-size: 12px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      color: #486078;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .nav-links a[aria-current="page"] {
+      color: var(--action);
+      font-weight: 760;
+    }
+
+    .nav-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      border: 1px solid var(--action);
+      background: var(--action);
+      color: var(--white);
+      padding: 0 18px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .hero {
+      border-bottom: 1px solid var(--line);
+      background:
+        linear-gradient(90deg, rgba(255,255,255,0.99) 0%, rgba(255,255,255,0.96) 45%, rgba(244,251,255,0.78) 72%, rgba(244,251,255,0.48) 100%),
+        url("hero-denk-factory.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-inner {
+      width: min(1160px, calc(100% - 40px));
+      min-height: 560px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 650px) minmax(300px, 1fr);
+      align-items: center;
+      gap: 42px;
+    }
+
+    .kicker,
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 760;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .kicker::before,
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 2px;
+      background: var(--covered);
+    }
+
+    h1 {
+      margin: 18px 0 0;
+      color: var(--covered-deep);
+      font-size: clamp(54px, 7vw, 84px);
+      line-height: 0.95;
+      font-weight: 820;
+      letter-spacing: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .hero-subtitle {
+      margin-top: 22px;
+      color: var(--navy);
+      font-size: clamp(26px, 3vw, 38px);
+      line-height: 1.08;
+      font-weight: 790;
+      letter-spacing: 0;
+    }
+
+    .hero-copy {
+      max-width: 650px;
+      margin: 22px 0 0;
+      color: #36475d;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button-primary,
+    .button-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      border: 1px solid var(--action);
+      padding: 0 20px;
+      font-size: 14px;
+      font-weight: 740;
+    }
+
+    .button-primary {
+      background: var(--action);
+      color: var(--white);
+    }
+
+    .button-secondary {
+      background: rgba(255,255,255,0.82);
+      color: var(--action);
+    }
+
+    .career-note {
+      display: grid;
+      gap: 14px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.9);
+      padding: 28px;
+      box-shadow: 0 24px 60px rgba(35, 135, 201, 0.08);
+    }
+
+    .career-note h2 {
+      margin: 0;
+      color: var(--navy);
+      font-size: 25px;
+      line-height: 1.15;
+      font-weight: 800;
+    }
+
+    .career-note p {
+      margin: 0;
+      color: var(--slate);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .proof-strip {
+      width: min(1160px, calc(100% - 40px));
+      margin: -50px auto 0;
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      border: 1px solid var(--line);
+      background: var(--white);
+      box-shadow: 0 24px 60px rgba(35, 135, 201, 0.08);
+    }
+
+    .proof-item {
+      min-height: 118px;
+      padding: 28px;
+      border-right: 1px solid var(--line);
+    }
+
+    .proof-item:last-child {
+      border-right: 0;
+    }
+
+    .proof-value {
+      color: var(--covered-deep);
+      font-size: 22px;
+      line-height: 1.15;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .proof-label {
+      margin-top: 9px;
+      color: var(--slate);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .section {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 92px 0 0;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
+      gap: 72px;
+      align-items: end;
+      margin-bottom: 34px;
+    }
+
+    h2 {
+      margin: 14px 0 0;
+      color: var(--navy);
+      font-size: clamp(32px, 4vw, 46px);
+      line-height: 1.06;
+      font-weight: 790;
+      letter-spacing: 0;
+    }
+
+    .section-copy {
+      color: #435168;
+      font-size: 17px;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .jobs-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .job-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 240px;
+      gap: 0;
+      border: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .job-main {
+      appearance: none;
+      width: 100%;
+      border: 0;
+      background: transparent;
+      padding: 30px;
+      color: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .job-main:focus-visible {
+      outline: 3px solid rgba(35, 135, 201, 0.35);
+      outline-offset: -3px;
+    }
+
+    .job-main:hover h3,
+    .job-main:focus-visible h3 {
+      color: var(--covered-deep);
+    }
+
+    .job-kicker {
+      color: var(--covered);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .job-card h3 {
+      margin: 10px 0 12px;
+      color: var(--navy);
+      font-size: 26px;
+      line-height: 1.18;
+    }
+
+    .job-summary {
+      margin: 0;
+      color: #435168;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .job-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 18px 0 0;
+    }
+
+    .open-profile-text {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      margin-top: 20px;
+      color: var(--action);
+      font-size: 14px;
+      font-weight: 780;
+    }
+
+    .job-pill {
+      border: 1px solid var(--line);
+      background: var(--covered-soft);
+      color: var(--navy);
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 740;
+    }
+
+    .job-detail-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    .job-detail h4 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: 14px;
+      line-height: 1.25;
+    }
+
+    .job-detail ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--slate);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .job-side {
+      border-left: 1px solid var(--line);
+      padding-left: 24px;
+      display: grid;
+      align-content: start;
+      gap: 16px;
+    }
+
+    .job-side {
+      padding: 30px 24px;
+    }
+
+    .side-label {
+      color: var(--slate);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .side-value {
+      margin-top: 3px;
+      color: var(--navy);
+      font-size: 15px;
+      font-weight: 760;
+      line-height: 1.35;
+    }
+
+    .apply-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      border: 1px solid var(--action);
+      background: var(--action);
+      color: var(--white);
+      padding: 0 16px;
+      font-size: 14px;
+      font-weight: 760;
+    }
+
+    .copy-link-button,
+    .profile-close {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .copy-link-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      border: 1px solid var(--action);
+      background: var(--white);
+      color: var(--action);
+      padding: 0 14px;
+      font-size: 14px;
+      font-weight: 760;
+    }
+
+    .share-status {
+      min-height: 18px;
+      color: var(--covered-deep);
+      font-size: 12px;
+      font-weight: 740;
+    }
+
+    .position-profile[hidden] {
+      display: none;
+    }
+
+    .position-profile {
+      position: fixed;
+      inset: 0;
+      z-index: 80;
+      display: grid;
+      place-items: center;
+      padding: 28px;
+    }
+
+    .profile-backdrop {
+      position: absolute;
+      inset: 0;
+      border: 0;
+      background: rgba(7, 35, 69, 0.38);
+      cursor: pointer;
+    }
+
+    .profile-panel {
+      position: relative;
+      z-index: 1;
+      width: min(980px, 100%);
+      max-height: calc(100vh - 56px);
+      overflow: auto;
+      border: 1px solid var(--line);
+      background: var(--white);
+      box-shadow: 0 28px 80px rgba(7, 35, 69, 0.24);
+    }
+
+    .profile-header {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 22px;
+      align-items: start;
+      padding: 34px 34px 24px;
+      border-bottom: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(244, 251, 255, 0.95), rgba(255,255,255,1)),
+        var(--white);
+    }
+
+    .profile-header h3 {
+      margin: 10px 0 0;
+      color: var(--navy);
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.05;
+    }
+
+    .profile-close {
+      min-width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      color: var(--navy);
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .profile-body {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 260px;
+      gap: 34px;
+      padding: 34px;
+    }
+
+    .profile-summary {
+      margin: 0;
+      color: #435168;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .profile-side {
+      border-left: 1px solid var(--line);
+      padding-left: 24px;
+      display: grid;
+      align-content: start;
+      gap: 16px;
+    }
+
+    .profile-link {
+      overflow-wrap: anywhere;
+      color: var(--covered-deep);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    body.profile-open {
+      overflow: hidden;
+    }
+
+    .empty-state {
+      border: 1px solid var(--line);
+      background: var(--white);
+      padding: 34px;
+    }
+
+    .empty-state h3 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: 24px;
+    }
+
+    .empty-state p {
+      margin: 0;
+      color: var(--slate);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      border: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .process-card {
+      min-height: 186px;
+      padding: 28px;
+      border-right: 1px solid var(--line);
+    }
+
+    .process-card:last-child {
+      border-right: 0;
+    }
+
+    .process-number {
+      color: var(--covered);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+
+    .process-card h3 {
+      margin: 18px 0 10px;
+      color: var(--navy);
+      font-size: 18px;
+      line-height: 1.25;
+    }
+
+    .process-card p {
+      margin: 0;
+      color: var(--slate);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .contact-band {
+      width: min(1160px, calc(100% - 40px));
+      margin: 92px auto 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .contact-copy,
+    .contact-panel {
+      min-height: 280px;
+      padding: 34px;
+    }
+
+    .contact-copy {
+      border-right: 1px solid var(--line);
+    }
+
+    .contact-copy h2 {
+      font-size: 32px;
+    }
+
+    .contact-copy p {
+      margin: 18px 0 0;
+      color: var(--slate);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .contact-panel {
+      background: var(--action);
+      color: var(--white);
+      border-color: var(--action);
+    }
+
+    .contact-panel .kicker,
+    .contact-panel .kicker::before {
+      color: var(--white);
+    }
+
+    .contact-panel .kicker::before {
+      background: var(--white);
+    }
+
+    .contact-panel h3 {
+      margin: 16px 0 14px;
+      font-size: 28px;
+      line-height: 1.15;
+      color: var(--white);
+    }
+
+    .contact-panel p {
+      color: rgba(255,255,255,0.78);
+      font-size: 15px;
+      line-height: 1.7;
+      margin: 0 0 22px;
+    }
+
+    .contact-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      color: var(--slate);
+      font-size: 13px;
+      padding: 26px 0 36px;
+      text-align: center;
+      margin-top: 92px;
+    }
+
+    @media (max-width: 980px) {
+      .header-inner {
+        padding: 13px 0;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero-inner,
+      .section-head,
+      .job-card,
+      .job-detail-grid,
+      .profile-body,
+      .process-grid,
+      .contact-band,
+      .proof-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-inner {
+        min-height: 650px;
+      }
+
+      .career-note {
+        display: none;
+      }
+
+      .proof-item,
+      .process-card,
+      .contact-copy {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .proof-item:last-child,
+      .process-card:last-child {
+        border-bottom: 0;
+      }
+
+      .job-side {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+        padding-left: 0;
+        padding-top: 22px;
+      }
+
+      .profile-side {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+        padding-left: 0;
+        padding-top: 22px;
+      }
+
+      .section-head {
+        gap: 28px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .header-inner,
+      .hero-inner,
+      .proof-strip,
+      .section,
+      .contact-band {
+        width: min(100% - 28px, 1160px);
+      }
+
+      .brand img {
+        width: 42px;
+        height: 42px;
+      }
+
+      .brand-name {
+        white-space: normal;
+      }
+
+      .brand-line {
+        max-width: 250px;
+      }
+
+      .nav-action {
+        display: none;
+      }
+
+      .hero {
+        background:
+          linear-gradient(90deg, rgba(255,255,255,0.99) 0%, rgba(244,251,255,0.94) 66%, rgba(244,251,255,0.78) 100%),
+          url("hero-denk-factory.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+
+      h1 {
+        font-size: 48px;
+      }
+
+      .hero-subtitle {
+        font-size: 25px;
+      }
+
+      .hero-copy,
+      .section-copy {
+        font-size: 16px;
+      }
+
+      .proof-strip {
+        margin-top: 18px;
+      }
+
+      .section {
+        padding-top: 68px;
+      }
+
+      .job-card,
+      .empty-state,
+      .profile-header,
+      .profile-body,
+      .contact-copy,
+      .contact-panel {
+        padding: 24px;
+      }
+
+      .position-profile {
+        padding: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <div class="header-inner">
+        <a class="brand" href="al-khwarizmi-homepage-example.html">
+          <img src="al-khwarizmi-logo.png" alt="Al-Khwarizmi logo" />
+          <div>
+            <div class="brand-name">Al-Khwarizmi</div>
+            <div class="brand-line">Guardians Of Integrity</div>
+          </div>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="al-khwarizmi-homepage-example.html#about">About</a>
+          <a href="al-khwarizmi-homepage-example.html#services">Services</a>
+          <a href="al-khwarizmi-homepage-example.html#coverage">Coverage</a>
+          <a href="al-khwarizmi-homepage-example.html#partners">Partners</a>
+          <a href="careers.html" aria-current="page">Careers</a>
+          <a href="al-khwarizmi-homepage-example.html#contact">Contact</a>
+        </nav>
+        <a class="nav-action" href="#open-positions">Open positions</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">Careers</div>
+          <h1>Work With Us</h1>
+          <div class="hero-subtitle">Careers built on integrity, discipline, and healthcare trust.</div>
+          <p class="hero-copy">
+            Al-Khwarizmi works with professionals who value responsible communication,
+            accurate reporting, field discipline, and long-term partnership in the
+            pharmaceutical sector.
+          </p>
+          <div class="hero-actions">
+            <a class="button-primary" href="#open-positions">View Open Positions</a>
+            <a class="button-secondary" href="mailto:careers@al-khwarizmi.co?subject=Career%20Application">Send CV</a>
+          </div>
+        </div>
+        <aside class="career-note" aria-label="Career principles">
+          <div class="kicker">Guardians Of Integrity</div>
+          <h2>Professional growth with a responsible healthcare partner.</h2>
+          <p>
+            We look for candidates who can represent healthcare information with care,
+            accuracy, respect, and disciplined follow-up.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="proof-strip" aria-label="Career principles">
+      <div class="proof-item">
+        <div class="proof-value">Scientific Communication</div>
+        <div class="proof-label">Clear, evidence-aware communication with healthcare professionals.</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-value">Field Discipline</div>
+        <div class="proof-label">Structured planning, follow-up, and responsible market execution.</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-value">Long-Term Partnership</div>
+        <div class="proof-label">A calm, professional culture built around trust and accountability.</div>
+      </div>
+    </section>
+
+    <section class="section" id="open-positions">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Employment</div>
+          <h2>Current open positions.</h2>
+        </div>
+        <p class="section-copy">
+          Review available opportunities and send your CV by email with the role title
+          in the subject line. General applications are also welcome for future review.
+        </p>
+      </div>
+      <div class="jobs-list" id="jobsList" aria-live="polite"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Application Process</div>
+          <h2>A clear process for candidates.</h2>
+        </div>
+        <p class="section-copy">
+          The page keeps the application journey simple, respectful, and easy to manage
+          for both applicants and the Al-Khwarizmi team.
+        </p>
+      </div>
+      <div class="process-grid">
+        <article class="process-card">
+          <div class="process-number">01</div>
+          <h3>Send CV</h3>
+          <p>Applicants send their CV by email with the role title in the subject line.</p>
+        </article>
+        <article class="process-card">
+          <div class="process-number">02</div>
+          <h3>Review</h3>
+          <p>The team reviews qualifications, experience, location fit, and communication quality.</p>
+        </article>
+        <article class="process-card">
+          <div class="process-number">03</div>
+          <h3>Interview</h3>
+          <p>Shortlisted candidates are contacted for a professional interview and next steps.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-band" id="contact">
+      <div class="contact-copy">
+        <div class="kicker">Career Contact</div>
+        <h2>Send applications to the Sulaymaniyah office.</h2>
+        <p>
+          Candidates should include their CV, contact details, city, and the position
+          they are applying for. For general applications, mention the professional area
+          of interest in the email subject.
+        </p>
+      </div>
+      <div class="contact-panel">
+        <div class="kicker">Contact</div>
+        <h3>Careers & CVs</h3>
+        <p>
+          Al-Khwarizmi Company For Trading Pharmaceuticals, Medical Devices and Laboratory
+          Supplies / Limited. Sulaymaniyah, Iraq.
+        </p>
+        <div class="contact-line">
+          <span>+964 770 481 9142</span>
+          <span>careers@al-khwarizmi.co</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      Al-Khwarizmi - Exclusive Agency of Denk Pharma in Iraqi Kurdistan
+    </footer>
+
+    <div class="position-profile" id="positionProfile" hidden role="dialog" aria-modal="true" aria-labelledby="profileTitle">
+      <button class="profile-backdrop" type="button" data-close-profile aria-label="Close position profile"></button>
+      <article class="profile-panel">
+        <header class="profile-header">
+          <div>
+            <div class="job-kicker" id="profileDepartment">Open Position</div>
+            <h3 id="profileTitle">Position profile</h3>
+          </div>
+          <button class="profile-close" type="button" data-close-profile aria-label="Close position profile">&times;</button>
+        </header>
+        <div class="profile-body" id="profileBody"></div>
+      </article>
+    </div>
+  </main>
+
+  <script src="careers-positions.js?v=2"></script>
+  <script>
+    const CAREERS_EMAIL = "careers@al-khwarizmi.co";
+    const jobsList = document.getElementById("jobsList");
+    const profile = document.getElementById("positionProfile");
+    const profileTitle = document.getElementById("profileTitle");
+    const profileDepartment = document.getElementById("profileDepartment");
+    const profileBody = document.getElementById("profileBody");
+    const positions = Array.isArray(window.ALKHWARIZMI_OPEN_POSITIONS)
+      ? window.ALKHWARIZMI_OPEN_POSITIONS
+      : [];
+    let activePositionIndex = null;
+
+    function escapeHtml(value) {
+      return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function renderList(items) {
+      return items.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+    }
+
+    function slugify(value) {
+      return String(value || "")
+        .toLowerCase()
+        .trim()
+        .replace(/&/g, "and")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+    }
+
+    function getPositionSlug(position) {
+      return slugify(position.slug || position.title || "open-position");
+    }
+
+    function getPositionUrl(position) {
+      const url = new URL(window.location.href);
+      url.search = "";
+      url.hash = `position-${getPositionSlug(position)}`;
+      return url.href;
+    }
+
+    function getApplyEmail(position) {
+      return String(position.applyTo || CAREERS_EMAIL).replace(/[^a-zA-Z0-9@._+-]/g, "") || CAREERS_EMAIL;
+    }
+
+    function getApplyHref(position) {
+      const subject = encodeURIComponent(position.applySubject || `Career Application - ${position.title}`);
+      return `mailto:${getApplyEmail(position)}?subject=${subject}`;
+    }
+
+    async function copyText(value) {
+      if (navigator.clipboard && window.isSecureContext) {
+        try {
+          await navigator.clipboard.writeText(value);
+          return true;
+        } catch (error) {
+          // Continue to the fallback below when clipboard permission is blocked.
+        }
+      }
+
+      const textArea = document.createElement("textarea");
+      textArea.value = value;
+      textArea.setAttribute("readonly", "");
+      textArea.style.position = "fixed";
+      textArea.style.left = "-9999px";
+      document.body.appendChild(textArea);
+      textArea.select();
+      const copied = document.execCommand("copy");
+      textArea.remove();
+      return copied;
+    }
+
+    async function copyPositionLink(index, statusElement) {
+      const position = positions[index];
+      if (!position) return;
+
+      try {
+        const copied = await copyText(getPositionUrl(position));
+        if (statusElement) {
+          statusElement.textContent = copied ? "Post link copied" : "Post link is shown above";
+        }
+      } catch (error) {
+        if (statusElement) {
+          statusElement.textContent = "Post link is shown above";
+        }
+      }
+    }
+
+    function renderPosition(position, index) {
+      const slug = getPositionSlug(position);
+      const postUrl = getPositionUrl(position);
+
+      return `
+        <article class="job-card" id="position-${escapeHtml(slug)}">
+          <button class="job-main" type="button" data-open-position="${index}" aria-describedby="summary-${escapeHtml(slug)}">
+            <div class="job-kicker">${escapeHtml(position.department || "Open Position")}</div>
+            <h3>${escapeHtml(position.title)}</h3>
+            <p class="job-summary" id="summary-${escapeHtml(slug)}">${escapeHtml(position.summary || "")}</p>
+            <div class="job-meta" aria-label="Position details">
+              <span class="job-pill">${escapeHtml(position.location || "Iraqi Kurdistan")}</span>
+              <span class="job-pill">${escapeHtml(position.type || "Full-time")}</span>
+              <span class="job-pill">${escapeHtml(position.status || "Open")}</span>
+            </div>
+            <span class="open-profile-text">Open position profile</span>
+          </button>
+          <aside class="job-side" aria-label="Apply details">
+            <div>
+              <div class="side-label">Posted</div>
+              <div class="side-value">${escapeHtml(position.posted || "Open")}</div>
+            </div>
+            <div>
+              <div class="side-label">Department</div>
+              <div class="side-value">${escapeHtml(position.department || "General")}</div>
+            </div>
+            <button class="copy-link-button" type="button" data-copy-position="${index}">Copy post link</button>
+            <div class="share-status" id="share-status-${index}" aria-live="polite"></div>
+            <a class="apply-button" href="${escapeHtml(getApplyHref(position))}">Apply by Email</a>
+            <div class="profile-link">${escapeHtml(postUrl)}</div>
+          </aside>
+        </article>
+      `;
+    }
+
+    function openPosition(index, updateHash = true) {
+      const position = positions[index];
+      if (!position) return;
+
+      activePositionIndex = index;
+      profileTitle.textContent = position.title || "Position profile";
+      profileDepartment.textContent = position.department || "Open Position";
+
+      const postUrl = getPositionUrl(position);
+      profileBody.innerHTML = `
+        <div>
+          <p class="profile-summary">${escapeHtml(position.summary || "")}</p>
+          <div class="job-meta" aria-label="Position details">
+            <span class="job-pill">${escapeHtml(position.location || "Iraqi Kurdistan")}</span>
+            <span class="job-pill">${escapeHtml(position.type || "Full-time")}</span>
+            <span class="job-pill">${escapeHtml(position.status || "Open")}</span>
+          </div>
+          <div class="job-detail-grid">
+            <div class="job-detail">
+              <h4>Responsibilities</h4>
+              <ul>${renderList(position.responsibilities || [])}</ul>
+            </div>
+            <div class="job-detail">
+              <h4>Requirements</h4>
+              <ul>${renderList(position.requirements || [])}</ul>
+            </div>
+          </div>
+        </div>
+        <aside class="profile-side" aria-label="Position profile actions">
+          <div>
+            <div class="side-label">Posted</div>
+            <div class="side-value">${escapeHtml(position.posted || "Open")}</div>
+          </div>
+          <div>
+            <div class="side-label">Application email</div>
+            <div class="side-value">${escapeHtml(getApplyEmail(position))}</div>
+          </div>
+          <div>
+            <div class="side-label">Shareable post link</div>
+            <div class="profile-link">${escapeHtml(postUrl)}</div>
+          </div>
+          <button class="copy-link-button" type="button" data-copy-position="${index}">Copy post link</button>
+          <div class="share-status" id="profile-share-status" aria-live="polite"></div>
+          <a class="apply-button" href="${escapeHtml(getApplyHref(position))}">Apply by Email</a>
+        </aside>
+      `;
+
+      profile.hidden = false;
+      document.body.classList.add("profile-open");
+
+      if (updateHash) {
+        history.pushState(null, "", `#position-${getPositionSlug(position)}`);
+      }
+
+      profile.querySelector(".profile-close").focus();
+    }
+
+    function closePosition(clearHash = true) {
+      profile.hidden = true;
+      document.body.classList.remove("profile-open");
+      activePositionIndex = null;
+
+      if (clearHash && window.location.hash.startsWith("#position-")) {
+        history.pushState(null, "", window.location.pathname + window.location.search);
+      }
+    }
+
+    function openPositionFromHash() {
+      if (!window.location.hash.startsWith("#position-")) return;
+
+      const slug = window.location.hash.replace("#position-", "");
+      const index = positions.findIndex((position) => getPositionSlug(position) === slug);
+      if (index >= 0) {
+        openPosition(index, false);
+      }
+    }
+
+    if (positions.length === 0) {
+      jobsList.innerHTML = `
+        <div class="empty-state">
+          <h3>No open positions currently.</h3>
+          <p>
+            Candidates may still send a general CV to careers@al-khwarizmi.co for
+            future consideration.
+          </p>
+        </div>
+      `;
+    } else {
+      jobsList.innerHTML = positions.map(renderPosition).join("");
+    }
+
+    jobsList.addEventListener("click", (event) => {
+      const openButton = event.target.closest("[data-open-position]");
+      const copyButton = event.target.closest("[data-copy-position]");
+
+      if (openButton) {
+        openPosition(Number(openButton.dataset.openPosition));
+      }
+
+      if (copyButton) {
+        const index = Number(copyButton.dataset.copyPosition);
+        const statusElement = document.getElementById(`share-status-${index}`);
+        copyPositionLink(index, statusElement);
+      }
+    });
+
+    profile.addEventListener("click", (event) => {
+      const closeButton = event.target.closest("[data-close-profile]");
+      const copyButton = event.target.closest("[data-copy-position]");
+
+      if (closeButton) {
+        closePosition();
+      }
+
+      if (copyButton) {
+        const index = Number(copyButton.dataset.copyPosition);
+        const statusElement = document.getElementById("profile-share-status");
+        copyPositionLink(index, statusElement);
+      }
+    });
+
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !profile.hidden) {
+        closePosition();
+      }
+    });
+
+    window.addEventListener("hashchange", openPositionFromHash);
+    openPositionFromHash();
+  </script>
+</body>
+</html>
