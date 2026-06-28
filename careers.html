@@ -404,6 +404,10 @@
       margin-top: 24px;
     }
 
+    .job-detail-full {
+      grid-column: 1 / -1;
+    }
+
     .job-detail h4 {
       margin: 0 0 10px;
       color: var(--navy);
@@ -429,6 +433,20 @@
 
     .job-side {
       padding: 30px 24px;
+    }
+
+    .job-partner-logo,
+    .profile-partner-logo {
+      width: 92px;
+      max-width: 100%;
+    }
+
+    .job-partner-logo img,
+    .profile-partner-logo img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 9px;
     }
 
     .side-label {
@@ -994,7 +1012,7 @@
     </div>
   </main>
 
-  <script src="careers-positions.js?v=2"></script>
+  <script src="careers-positions.js?v=3"></script>
   <script>
     const CAREERS_EMAIL = "careers@al-khwarizmi.co";
     const jobsList = document.getElementById("jobsList");
@@ -1018,6 +1036,30 @@
 
     function renderList(items) {
       return items.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+    }
+
+    function renderPartnerLogo(position, className = "job-partner-logo") {
+      if (!position.partnerLogo) return "";
+
+      const alt = position.partnerLogoAlt || "Partner logo";
+
+      return `
+        <div class="${escapeHtml(className)}" aria-label="${escapeHtml(alt)}">
+          <img src="${escapeHtml(position.partnerLogo)}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" />
+        </div>
+      `;
+    }
+
+    function renderApplicationInstructions(position) {
+      const instructions = position.applicationInstructions || [];
+      if (!instructions.length) return "";
+
+      return `
+        <div class="job-detail job-detail-full">
+          <h4>How to Apply</h4>
+          <ul>${renderList(instructions)}</ul>
+        </div>
+      `;
     }
 
     function slugify(value) {
@@ -1105,6 +1147,7 @@
             <span class="open-profile-text">Open position profile</span>
           </button>
           <aside class="job-side" aria-label="Apply details">
+            ${renderPartnerLogo(position)}
             <div>
               <div class="side-label">Posted</div>
               <div class="side-value">${escapeHtml(position.posted || "Open")}</div>
@@ -1148,9 +1191,11 @@
               <h4>Requirements</h4>
               <ul>${renderList(position.requirements || [])}</ul>
             </div>
+            ${renderApplicationInstructions(position)}
           </div>
         </div>
         <aside class="profile-side" aria-label="Position profile actions">
+          ${renderPartnerLogo(position, "profile-partner-logo")}
           <div>
             <div class="side-label">Posted</div>
             <div class="side-value">${escapeHtml(position.posted || "Open")}</div>
