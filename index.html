@@ -27,6 +27,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 92px;
     }
 
     body {
@@ -52,6 +53,13 @@
       background:
         linear-gradient(180deg, rgba(244, 251, 255, 0.96), rgba(255,255,255,1) 430px),
         var(--white);
+    }
+
+    .hero,
+    .section,
+    .coverage-band,
+    .contact-panel {
+      scroll-margin-top: 92px;
     }
 
     .header {
@@ -912,5 +920,27 @@
       Al-Khwarizmi - Exclusive Agency of Denk Pharma in Iraqi Kurdistan
     </footer>
   </main>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach((link) => {
+      link.addEventListener("click", (event) => {
+        const href = link.getAttribute("href");
+
+        if (!href || href === "#") {
+          return;
+        }
+
+        const target = document.getElementById(href.slice(1));
+
+        if (!target) {
+          return;
+        }
+
+        event.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        history.pushState(null, "", href);
+      });
+    });
+  </script>
 </body>
 </html>
