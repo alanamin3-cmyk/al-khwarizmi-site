@@ -1097,6 +1097,22 @@
       return slugify(position.slug || position.title || "open-position");
     }
 
+    function getPositionSlugs(position) {
+      const slugs = [getPositionSlug(position)];
+
+      if (Array.isArray(position.legacySlugs)) {
+        position.legacySlugs.forEach((slug) => {
+          const normalized = slugify(slug);
+
+          if (normalized && !slugs.includes(normalized)) {
+            slugs.push(normalized);
+          }
+        });
+      }
+
+      return slugs;
+    }
+
     function getPositionUrl(position) {
       const url = new URL(window.location.href);
       url.search = "";
@@ -1260,8 +1276,14 @@
       if (!window.location.hash.startsWith("#position-")) return;
 
       const slug = window.location.hash.replace("#position-", "");
-      const index = positions.findIndex((position) => getPositionSlug(position) === slug);
+      const index = positions.findIndex((position) => getPositionSlugs(position).includes(slug));
       if (index >= 0) {
+        const canonicalSlug = getPositionSlug(positions[index]);
+
+        if (slug !== canonicalSlug) {
+          history.replaceState(null, "", `#position-${canonicalSlug}`);
+        }
+
         openPosition(index, false);
       }
     }

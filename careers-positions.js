@@ -9,6 +9,8 @@
   The slug creates the shareable job-post link:
   careers.html#position-your-slug-here
 
+  Optional legacySlugs keep older shared links working after a job title or region wording changes.
+
   To remove a position:
   1. Delete its full object from the list.
   2. Keep the square brackets around the list.
@@ -16,8 +18,9 @@
 
 window.ALKHWARIZMI_OPEN_POSITIONS = [
   {
-    slug: "medical-sales-representative-east-duhok-region",
-    title: "Medical Sales Representative – East Duhok Region",
+    slug: "medical-sales-representative-eastern-duhok-region",
+    legacySlugs: ["medical-sales-representative-east-duhok-region"],
+    title: "Medical Sales Representative – Eastern Duhok Region",
     location: "Akre, Bardarash, and Shekhan – Duhok Governorate",
     department: "Sales and Marketing",
     type: "Full-time field role",
@@ -26,7 +29,7 @@ window.ALKHWARIZMI_OPEN_POSITIONS = [
     partnerLogo: "denk-pharma-logo.png",
     partnerLogoAlt: "Denk Pharma logo",
     summary:
-      "Denk Pharma GmbH & Co. KG, via its local agency in Iraqi Kurdistan Al-Khwarizmi Company, is looking for a qualified and disciplined Medical Sales Representative to join its medical-commercial team in the east region of Duhok Governorate.",
+      "Denk Pharma GmbH & Co. KG, via its local agency in Iraqi Kurdistan Al-Khwarizmi Company, is looking for a qualified and disciplined Medical Sales Representative to join its medical-commercial team in the eastern region of Duhok Governorate.",
     responsibilities: [
       "Promote assigned pharmaceutical products professionally to healthcare professionals.",
       "Build and maintain strong relationships with doctors, pharmacists, and relevant healthcare stakeholders.",
@@ -43,10 +46,10 @@ window.ALKHWARIZMI_OPEN_POSITIONS = [
     ],
     applicationInstructions: [
       "Send your CV to careers@al-khwarizmi.co.",
-      "Use the subject line: Medical Sales Representative – East Duhok Region.",
+      "Use the subject line: Medical Sales Representative – Eastern Duhok Region.",
       "Include your CV, contact details, current city, and the position you are applying for."
     ],
     applyTo: "careers@al-khwarizmi.co",
-    applySubject: "Medical Sales Representative – East Duhok Region"
+    applySubject: "Medical Sales Representative – Eastern Duhok Region"
   }
 ];
