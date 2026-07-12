@@ -63,7 +63,7 @@ window.ALKHWARIZMI_OPEN_POSITIONS = [
     partnerLogo: "denk-pharma-logo.png",
     partnerLogoAlt: "Denk Pharma logo",
     summary:
-      "Denk Pharma GmbH & Co. KG, via its local agency in Iraqi Kurdistan Al-Khwarizmi Company, is looking for a qualified and disciplined Medical Sales Representative to join its medical-commercial team in the eastern region of Erbil Governorate.",
+      "Denk Pharma GmbH & Co. KG, via its local agency in Iraqi Kurdistan Al-Khwarizmi Company, is looking for a qualified and disciplined Medical Representative to join its medical-commercial team in the Erbil Governorate.",
     responsibilities: [
       "Promote assigned pharmaceutical products professionally to healthcare professionals.",
       "Build and maintain strong relationships with doctors, pharmacists, and relevant healthcare stakeholders.",
