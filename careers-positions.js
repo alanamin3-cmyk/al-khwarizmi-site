@@ -51,5 +51,39 @@ window.ALKHWARIZMI_OPEN_POSITIONS = [
     ],
     applyTo: "careers@al-khwarizmi.co",
     applySubject: "Medical Sales Representative – Eastern Duhok Region"
+  },
+  {
+    slug: "medical-representative-erbil-governorate",
+    title: "Medical Representative – Erbil Governorate",
+    location: "Erbil Governorate",
+    department: "Sales and Marketing",
+    type: "Full-time field role",
+    status: "Open",
+    posted: "Open now",
+    partnerLogo: "denk-pharma-logo.png",
+    partnerLogoAlt: "Denk Pharma logo",
+    summary:
+      "Denk Pharma GmbH & Co. KG, via its local agency in Iraqi Kurdistan Al-Khwarizmi Company, is looking for a qualified and disciplined Medical Sales Representative to join its medical-commercial team in the eastern region of Erbil Governorate.",
+    responsibilities: [
+      "Promote assigned pharmaceutical products professionally to healthcare professionals.",
+      "Build and maintain strong relationships with doctors, pharmacists, and relevant healthcare stakeholders.",
+      "Prepare regular field reports and market feedback.",
+      "Follow planned visit schedules with discipline and accountability.",
+      "Support company objectives through ethical, evidence-aware communication."
+    ],
+    requirements: [
+      "Holds a BSc in Pharmacy or higher.",
+      "Must be based in Erbil city.",
+      "Must own a private car and be able to cover the assigned territory.",
+      "Strong communication, follow-up, and reporting skills.",
+      "Professional attitude, field discipline, and commitment to healthcare integrity."
+    ],
+    applicationInstructions: [
+      "Send your CV to careers@al-khwarizmi.co.",
+      "Use the subject line: Medical Representative – Erbil Governorate.",
+      "Include your CV, contact details, current city, and the position you are applying for."
+    ],
+    applyTo: "careers@al-khwarizmi.co",
+    applySubject: "Medical Representative – Erbil Governorate"
   }
 ];
