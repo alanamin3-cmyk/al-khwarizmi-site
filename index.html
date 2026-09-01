@@ -618,6 +618,20 @@
       text-align: center;
     }
 
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 18px;
+      margin-top: 10px;
+    }
+
+    .footer-links a {
+      color: var(--navy);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
     @media (max-width: 980px) {
       .header-inner {
         height: auto;
@@ -996,7 +1010,11 @@
     </section>
 
     <footer class="footer">
-      Al-Khwarizmi - Exclusive Agency of Denk Pharma in Iraqi Kurdistan
+      <div>Al-Khwarizmi - Exclusive Agency of Denk Pharma in Iraqi Kurdistan</div>
+      <div class="footer-links" aria-label="Legal information">
+        <a href="quickbooks-privacy.html">QuickBooks Privacy Policy</a>
+        <a href="quickbooks-eula.html">QuickBooks Terms (EULA)</a>
+      </div>
     </footer>
   </main>
 
