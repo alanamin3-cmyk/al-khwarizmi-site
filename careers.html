@@ -121,6 +121,13 @@
       font-weight: 760;
     }
 
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex: 0 0 auto;
+    }
+
     .nav-action {
       display: inline-flex;
       align-items: center;
@@ -132,6 +139,11 @@
       padding: 0 18px;
       font-size: 14px;
       font-weight: 700;
+    }
+
+    .nav-action-secondary {
+      background: transparent;
+      color: var(--action);
     }
 
     .hero {
@@ -853,8 +865,18 @@
         max-width: 250px;
       }
 
-      .nav-action {
+      .nav-actions {
+        gap: 0;
+      }
+
+      .nav-action:not(.nav-action-staff) {
         display: none;
+      }
+
+      .nav-action-staff {
+        min-height: 38px;
+        padding: 0 12px;
+        font-size: 13px;
       }
 
       .hero {
@@ -920,7 +942,10 @@
           <a href="careers.html" aria-current="page">Careers</a>
           <a href="index.html#contact">Contact</a>
         </nav>
-        <a class="nav-action" href="#open-positions">Open positions</a>
+        <div class="nav-actions">
+          <a class="nav-action nav-action-secondary" href="#open-positions">Open positions</a>
+          <a class="nav-action nav-action-staff" href="https://crm.al-khwarizmi.co">Staff Login</a>
+        </div>
       </div>
     </header>
 
